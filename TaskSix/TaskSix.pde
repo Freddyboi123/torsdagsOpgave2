@@ -2,7 +2,9 @@
 int redColor = color(255,0,0);
 int yellowColor = color(246,255,18);
 int greenColor = color(29,255,18);
-int noColor = color(50);
+int noColorRed = color(187,148,148);
+int noColoryellow = color(187,187,147);
+int noColorGreen = color(148,187,148);
 int light1 = 0;
 int light2 = 0;
 int light3 = 0;
@@ -20,30 +22,30 @@ void setup(){
 void draw() {
 switch (frameCount % 400){
 //red
-case 0:
+case 100:
 light1 = redColor; 
-light2 = noColor;
-light3 = noColor;
+light2 = noColoryellow;
+light3 = noColorGreen;
 break;
 
 //half green
-case 100:
+case 200:
 light1 = redColor; 
 light2 = yellowColor;
-light3 = noColor;
+light3 = noColorGreen;
 break;
 //grøn
-case 200:
-light1 = noColor; 
-light2 = noColor;
+case 300:
+light1 = noColorRed; 
+light2 = noColoryellow;
 light3 = greenColor;
 break;
 
 //yellow 
-case 300:
-light1 = noColor; 
+case 400:
+light1 = noColorRed; 
 light2 = yellowColor;
-light3 = noColor;
+light3 = noColorGreen;
 break;
 }
 
